@@ -7,5 +7,5 @@ var api =
     Retrofit
         .Builder()
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl("https://www.breakingbadapi.com/api/")
+        .baseUrl("https://breakingbadapi.com/api/")
         .build()

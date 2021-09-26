@@ -17,11 +17,11 @@ class CharactersListAdapter(private val characterList: List<Character>) : Recycl
         fun bind(characters: Character){
             Glide
                 .with(binding.root)
-                .load("https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg")
+                .load("${characters.img}")
                 .centerCrop()
                 .placeholder(R.drawable.ic_launcher_foreground)
                 .into(binding.profileImage)
-
+            Log.i("mz","URL: ${characters.img}")
             binding.root.setOnClickListener{
                 if(::onClickItem.isInitialized)
                     onClickItem(characters)

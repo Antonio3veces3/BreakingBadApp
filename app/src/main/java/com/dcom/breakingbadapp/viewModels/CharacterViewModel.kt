@@ -9,7 +9,7 @@ import com.dcom.breakingbadapp.services.characterService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-/*
+
 class CharacterViewModel: ViewModel() {
 
     private var _characters = MutableLiveData<MutableList<Character>>()
@@ -24,9 +24,9 @@ class CharacterViewModel: ViewModel() {
 
     private suspend fun fetch(): MutableList<Character>{
         return withContext(Dispatchers.IO){
-            val characters: MutableList<Character> = characterService.getCharacters().body
+            val characters: MutableList<Character> = characterService.getCharacters()
 
             characters
         }
     }
-}*/
+}

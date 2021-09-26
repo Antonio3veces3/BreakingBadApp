@@ -13,14 +13,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dcom.breakingbadapp.adapters.CharactersListAdapter
 import com.dcom.breakingbadapp.databinding.FragmentCharactersBinding
 import com.dcom.breakingbadapp.models.Character
-//import com.dcom.breakingbadapp.viewModels.CharacterViewModel
+import com.dcom.breakingbadapp.viewModels.CharacterViewModel
 import java.lang.ClassCastException
 
 class characters : Fragment() {
-
+/*
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    }
+    }*/
 
     public interface CharacterSelectListener{
         fun onCharacterSelected(character: Character)
@@ -39,31 +39,21 @@ class characters : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        //val characterViewModel= ViewModelProvider(this).get(CharacterViewModel::class.java)
+        val characterViewModel= ViewModelProvider(this).get(CharacterViewModel::class.java)
         val binding= FragmentCharactersBinding.inflate(inflater, container, false)
 
-        val characters= mutableListOf<Character>(
-            Character("")
-        )
-        val adapter= CharactersListAdapter(characters)
-        adapter.onClickItem={
-            Log.i("mz","Character: ${it.img}")
-            characterSelectListener.onCharacterSelected(it)
-        }
-        binding.recyclerCharacterList.layoutManager= LinearLayoutManager(requireActivity())
-        binding.recyclerCharacterList.adapter= adapter
-        /*characterViewModel.characters.observe(viewLifecycleOwner, Observer<MutableList<Character>>{
+        characterViewModel.characters.observe(viewLifecycleOwner, Observer<MutableList<Character>>{
             characters->
             val adapter= CharactersListAdapter(characters)
 
             adapter.onClickItem={
-                Log.i("mz","Character: ${it.array[0].img}")
+                Log.i("mz","Character: ${it.img}")
                 characterSelectListener.onCharacterSelected(it)
 
             }
             binding.recyclerCharacterList.layoutManager= LinearLayoutManager(requireActivity())
             binding.recyclerCharacterList.adapter= adapter
-        })*/
+        })
 
 
         return binding.root

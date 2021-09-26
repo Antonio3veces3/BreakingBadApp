@@ -5,7 +5,7 @@ class Character(
     val name: String,
     val birthday: String,
     val occupation: String,*/
-    val img: String?
+    val img: String
     /*val status: String,
     val nickname: String,
     val portrayed: String*/
