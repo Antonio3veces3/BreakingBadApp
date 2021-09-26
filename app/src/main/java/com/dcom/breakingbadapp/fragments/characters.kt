@@ -49,7 +49,6 @@ class characters : Fragment() {
             adapter.onClickItem={
                 Log.i("mz","Character: ${it.img}")
                 characterSelectListener.onCharacterSelected(it)
-
             }
             binding.recyclerCharacterList.layoutManager= LinearLayoutManager(requireActivity())
             binding.recyclerCharacterList.adapter= adapter
