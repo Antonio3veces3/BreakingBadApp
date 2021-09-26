@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dcom.breakingbadapp.activities.detailScreen.DetailActivity
+import com.dcom.breakingbadapp.activities.main.MainActivity
 import com.dcom.breakingbadapp.adapters.CharactersListAdapter
 import com.dcom.breakingbadapp.databinding.FragmentCharactersBinding
 import com.dcom.breakingbadapp.models.Character
@@ -27,6 +28,7 @@ class characters : Fragment() {
     public interface CharacterSelectListener{
         fun onCharacterSelected(character: Character)
     }
+
     private lateinit var characterSelectListener: CharacterSelectListener
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -41,8 +43,8 @@ class characters : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        val characterViewModel= ViewModelProvider(this).get(CharacterViewModel::class.java)
-        val binding= FragmentCharactersBinding.inflate(inflater, container, false)
+        val characterViewModel = ViewModelProvider(this).get(CharacterViewModel::class.java)
+        val binding = FragmentCharactersBinding.inflate(inflater, container, false)
 
         characterViewModel.characters.observe(viewLifecycleOwner, Observer<MutableList<Character>>{
             characters->
@@ -50,6 +52,7 @@ class characters : Fragment() {
 
             adapter.onClickItem={
                 Log.i("mz","Character: ${it.img}")
+                Log.i("mz","ID: ${it.char_id}")
                 characterSelectListener.onCharacterSelected(it)
             }
             binding.recyclerCharacterList.layoutManager= LinearLayoutManager(requireActivity())

@@ -1,7 +1,5 @@
 package com.dcom.breakingbadapp.models
 
-
-
 class Character(
     val char_id: Int,
     val name: String,
@@ -11,5 +9,4 @@ class Character(
     val status: String,
     val nickname: String,
     val portrayed: String
-
 ){}

@@ -1,4 +1,6 @@
 package com.dcom.breakingbadapp.api
 
-class ResponsePhrase {
+import com.dcom.breakingbadapp.models.Phrase
+
+class ResponsePhrase: ArrayList<Phrase>() {
 }

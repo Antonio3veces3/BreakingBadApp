@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intentButton)
                     return@setOnClickListener
             }
-            Toast.makeText(this, "ESTA MAL", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Please, put a valid email", Toast.LENGTH_LONG).show()
         }
     }
 }

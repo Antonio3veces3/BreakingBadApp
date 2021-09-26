@@ -17,8 +17,10 @@ class CharactersListAdapter(private val characterList: List<Character>) : Recycl
 
     inner class ViewHolder(private val binding: CharacterListItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(characters: Character){
+
             binding.name.text= characters.name
             binding.nickname.text= characters.nickname
+
             when(characters.status){
                 "Alive" ->{
                     Glide
@@ -31,7 +33,7 @@ class CharactersListAdapter(private val characterList: List<Character>) : Recycl
                 "Deceased" ->{
                     Glide
                         .with(binding.root)
-                        .load(detail_ic__death)
+                        .load(detail_ic_death)
                         .placeholder(ic_launcher_foreground)
                         .centerCrop()
                         .into(binding.statusIcon)
@@ -45,15 +47,15 @@ class CharactersListAdapter(private val characterList: List<Character>) : Recycl
                         .into(binding.statusIcon)
                 }
             }
-
             Glide
                 .with(binding.root)
                 .load("${characters.img}")
                 .centerCrop()
-                .placeholder(R.drawable.ic_launcher_foreground)
+                .placeholder(ic_launcher_foreground)
                 .into(binding.profileImage)
 
             Log.i("mz","URL: ${characters.img}")
+
             binding.root.setOnClickListener{
                 if(::onClickItem.isInitialized)
                     onClickItem(characters)
