@@ -1,6 +1,6 @@
 package com.dcom.breakingbadapp.api
 
-class Response<T>(
+class Response <T>(
     val body: T
 ) {
 }

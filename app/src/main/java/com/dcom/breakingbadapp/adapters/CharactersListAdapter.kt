@@ -6,18 +6,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dcom.breakingbadapp.R
-import com.dcom.breakingbadapp.databinding.FragmentCharactersBinding
+import com.dcom.breakingbadapp.databinding.CharacterListItemBinding
 import com.dcom.breakingbadapp.models.Character
 
 class CharactersListAdapter(private val characterList: List<Character>) : RecyclerView.Adapter<CharactersListAdapter.ViewHolder>(){
 
     lateinit var onClickItem: (Character) -> Unit
 
-    inner class ViewHolder(private val binding: FragmentCharactersBinding) : RecyclerView.ViewHolder(binding.root){
+    inner class ViewHolder(private val binding: CharacterListItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(characters: Character){
             Glide
                 .with(binding.root)
-                .load("${characters.img}")
+                .load("https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2012/01/comida-rapida-casera.jpg")
                 .centerCrop()
                 .placeholder(R.drawable.ic_launcher_foreground)
                 .into(binding.profileImage)
@@ -32,7 +32,7 @@ class CharactersListAdapter(private val characterList: List<Character>) : Recycl
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = FragmentCharactersBinding.inflate(LayoutInflater.from(parent.context))
+        val binding = CharacterListItemBinding.inflate(LayoutInflater.from(parent.context))
 
         return ViewHolder(binding)
     }

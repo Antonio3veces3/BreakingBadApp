@@ -2,20 +2,26 @@ package com.dcom.breakingbadapp.activities.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.dcom.breakingbadapp.R
 import com.dcom.breakingbadapp.fragments.adapters.viewPagersAdapter
 import com.dcom.breakingbadapp.fragments.characters
 import com.dcom.breakingbadapp.fragments.phrases
 import com.dcom.breakingbadapp.fragments.settings
+import com.dcom.breakingbadapp.models.Character
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), characters.CharacterSelectListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setUpTabs()
 
 
+    }
+
+    override fun onCharacterSelected(character: Character){
+        Log.i("mz","Character loaded on Main Activity: ${character.img}")
     }
 
     private fun setUpTabs(){

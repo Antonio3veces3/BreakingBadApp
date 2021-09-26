@@ -9,7 +9,7 @@ import com.dcom.breakingbadapp.services.characterService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
+/*
 class CharacterViewModel: ViewModel() {
 
     private var _characters = MutableLiveData<MutableList<Character>>()
@@ -29,4 +29,4 @@ class CharacterViewModel: ViewModel() {
             characters
         }
     }
-}
+}*/
