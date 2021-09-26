@@ -1,9 +1,11 @@
 package com.dcom.breakingbadapp.activities.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.dcom.breakingbadapp.R
+import com.dcom.breakingbadapp.activities.detailScreen.DetailActivity
 import com.dcom.breakingbadapp.fragments.adapters.viewPagersAdapter
 import com.dcom.breakingbadapp.fragments.characters
 import com.dcom.breakingbadapp.fragments.phrases
@@ -16,12 +18,12 @@ class MainActivity : AppCompatActivity(), characters.CharacterSelectListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setUpTabs()
-
-
     }
 
     override fun onCharacterSelected(character: Character){
-        Log.i("mz","Character loaded on Main Activity: ${character.img}")
+        val intent= Intent(this, DetailActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     private fun setUpTabs(){
