@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/blue_010">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,10 +11,21 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:layout_marginTop="50dp"
+            android:src="@drawable/bar_ic_character"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:letterSpacing=".14"
+            android:text="Breaking Bad"
             android:textAlignment="center"
-            android:src="@drawable/login_logo" />
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/email"
@@ -61,10 +72,13 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/green_033"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@color/green_409"
+            android:fontFamily="@font/alegreya_sans"
+            android:letterSpacing=".12"
             android:text="Login"
+            android:textColor="@color/white"
             android:textSize="20dp"
-            android:textStyle="italic" />
+            android:textStyle="bold" />
     </LinearLayout>
 </RelativeLayout>

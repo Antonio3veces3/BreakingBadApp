@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/charactersIcon"
-        android:icon="@drawable/bar_ic_character"
+        android:icon="@drawable/settings_ic_user"
         android:title="Characters" />
 
     <item
