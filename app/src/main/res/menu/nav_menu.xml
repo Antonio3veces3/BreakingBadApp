@@ -4,16 +4,16 @@
     <item
         android:id="@+id/charactersIcon"
         android:icon="@drawable/settings_ic_user"
-        android:title="Characters" />
+        android:title="@string/menu_characters" />
 
     <item
         android:id="@+id/phraseIcon"
         android:icon="@drawable/bar_ic_phrase"
-        android:title="Phrases" />
+        android:title="@string/menu_phrases" />
 
     <item
         android:id="@+id/settingsIcon"
         android:icon="@drawable/settings_ic_settings"
-        android:title="Settings" />
+        android:title="@string/menu_settings" />
 
 </menu>

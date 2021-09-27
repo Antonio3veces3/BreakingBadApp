@@ -15,7 +15,7 @@ import com.dcom.breakingbadapp.models.Character
 import com.dcom.breakingbadapp.models.Phrase
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, phrases.PhraseSelectListener, settings.LogOutSelectListener{
+class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, phrases.PhraseSelectListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,11 +56,6 @@ class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, ph
         overridePendingTransition(0, 0)
         startActivity(getIntent())
         overridePendingTransition(0, 0)
-    }
-
-    override fun onLogOutSelected(phrase: Phrase) {
-        val intent = Intent(this, settings::class.java)
-        startActivity(intent)
     }
 
 }

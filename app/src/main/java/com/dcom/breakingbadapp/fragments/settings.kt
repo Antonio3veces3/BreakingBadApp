@@ -19,23 +19,6 @@ class settings : Fragment() {
 
     }
 
-    public interface LogOutSelectListener{
-        fun onLogOutSelected(phrase: Phrase)
-    }
-
-    private lateinit var logOutSelectListener: settings.LogOutSelectListener
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        logOutSelectListener = try {
-            context as settings.LogOutSelectListener
-        }catch (error: ClassCastException){
-            throw ClassCastException("$context must be implemented PhraseSelectListener")
-        }
-
-    }
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
