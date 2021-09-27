@@ -22,10 +22,10 @@ class LoginActivity : AppCompatActivity() {
         val emailInt = email.text
 
         buttonLogin.setOnClickListener(){
-            var emailValid = isEmailValid(emailInt.toString())
+            //var emailValid = isEmailValid(emailInt.toString())
             if(email.text.isEmpty() || password.text.isEmpty()){
                 Toast.makeText(this, "Please, type your email or password", Toast.LENGTH_LONG).show()
-            }else if(emailValid==true){
+            }else {
                     val intentButton = Intent(this, MainActivity::class.java)
                     startActivity(intentButton)
                     return@setOnClickListener
@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
-    fun isEmailValid(email: String): Boolean {
+    /*fun isEmailValid(email: String): Boolean {
         return Pattern.compile(
             "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]|[\\w-]{2,}))@"
                     + "((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
@@ -43,4 +43,4 @@ class LoginActivity : AppCompatActivity() {
                     + "[0-9]{1,2}|25[0-5]|2[0-4][0-9]))|"
                     + "([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$"
         ).matcher(email).matches()
-    }
+    }*/
