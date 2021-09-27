@@ -16,8 +16,9 @@
             android:id="@+id/profile_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginStart="50dp"
             android:src="@drawable/settings_ic_user"
-            app:civ_border_color="#FF000000"
+            app:civ_border_color="#000"
             app:civ_border_width="2dp" />
 
         <LinearLayout
@@ -25,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="98dp"
+            android:layout_marginEnd="50dp"
             android:orientation="vertical"
             android:padding="20dp" >
 
@@ -57,14 +58,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout1"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="20dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:padding="10dp"
             android:layout_marginBottom="20dp"
-            android:gravity="end"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -88,7 +88,7 @@
                 android:drawableLeft="@drawable/settings_ic_settings"
                 android:letterSpacing=".10"
                 android:padding="12dp"
-                android:text="Configuración y privacidad"
+                android:text="Configuración"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -102,7 +102,7 @@
                 android:drawableLeft="@drawable/settings_ic_help"
                 android:letterSpacing=".10"
                 android:padding="12dp"
-                android:text="Ayuda y soporte técnico"
+                android:text="Ayuda"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
