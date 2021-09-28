@@ -9,7 +9,6 @@ interface QuotesService {
 
     @GET("quote/random")
     suspend fun getQuotes(): ResponsePhrase
-
 }
 
 var quotesService: QuotesService = api.create<QuotesService>(QuotesService::class.java)

@@ -15,7 +15,7 @@ class PhraseListAdapter(private val phrase: List<Phrase>) : RecyclerView.Adapter
         fun bind(phrase: Phrase){
 
             binding.nameAuthor.text = phrase.author
-            binding.phrase.text = phrase.quote
+            binding.phrase.text = "\"${phrase.quote}\""
 
             binding.root.setOnClickListener{
                 if(::onClickItemPhrase.isInitialized)

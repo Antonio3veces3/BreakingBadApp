@@ -10,7 +10,6 @@ interface CharacterService {
     @GET("characters/")
     suspend fun getCharacters(): Response
 
-
 }
 
 var characterService: CharacterService = api.create<CharacterService>(CharacterService::class.java)
