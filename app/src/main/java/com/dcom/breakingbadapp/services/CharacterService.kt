@@ -7,8 +7,9 @@ import retrofit2.http.GET
 
 interface CharacterService {
 
-    @GET("characters")
-    suspend fun getCharacters(): Response<MutableList<Character>>
+    @GET("characters/")
+    suspend fun getCharacters(): Response
+
 
 }
 

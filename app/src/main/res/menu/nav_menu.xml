@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/charactersIcon"
+        android:icon="@drawable/settings_ic_user"
+        android:title="@string/menu_characters" />
+
+    <item
+        android:id="@+id/phraseIcon"
+        android:icon="@drawable/bar_ic_phrase"
+        android:title="@string/menu_phrases" />
+
+    <item
+        android:id="@+id/settingsIcon"
+        android:icon="@drawable/settings_ic_settings"
+        android:title="@string/menu_settings" />
+
+</menu>

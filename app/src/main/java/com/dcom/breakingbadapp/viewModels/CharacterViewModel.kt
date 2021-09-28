@@ -24,7 +24,7 @@ class CharacterViewModel: ViewModel() {
 
     private suspend fun fetch(): MutableList<Character>{
         return withContext(Dispatchers.IO){
-            val characters: MutableList<Character> = characterService.getCharacters().body
+            val characters: MutableList<Character> = characterService.getCharacters()
 
             characters
         }
