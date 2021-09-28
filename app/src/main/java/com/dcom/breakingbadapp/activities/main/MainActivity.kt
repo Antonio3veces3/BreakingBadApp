@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.dcom.breakingbadapp.R
 import com.dcom.breakingbadapp.activities.detailScreen.DetailActivity
 import com.dcom.breakingbadapp.activities.login.LoginActivity
@@ -15,10 +16,10 @@ import com.dcom.breakingbadapp.fragments.phrases
 import com.dcom.breakingbadapp.fragments.settings
 import com.dcom.breakingbadapp.models.Character
 import com.dcom.breakingbadapp.models.Phrase
+import com.dcom.breakingbadapp.services.QuotesService
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, phrases.PhraseSelectListener,
-    settings.onButtonLogoutListener {
+class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, phrases.PhraseSelectListener, settings.onButtonLogoutListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,9 +66,9 @@ class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, ph
         finish()
         val intent= Intent(this, LoginActivity::class.java)
         startActivity(intent)
-
-        //Toast.makeText(this, "El botón ha sido pulsado", Toast.LENGTH_SHORT).show()
     }
-        /*val intent= Intent(this, LoginActivity::class.java )
-        startActivity(intent)*/
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
+
 }
