@@ -126,8 +126,8 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/logout"
+                    <Button
+                        android:id="@+id/btn_logout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/settings_ic_logout"
@@ -136,8 +136,10 @@
                         android:text="@string/settings_logOut"
                         android:textAlignment="center"
                         android:textColor="@color/white"
+                        android:background="@color/blue_010"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+
                 </LinearLayout>
 
                 <LinearLayout

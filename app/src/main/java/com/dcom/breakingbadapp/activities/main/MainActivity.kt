@@ -3,10 +3,12 @@ package com.dcom.breakingbadapp.activities.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.dcom.breakingbadapp.R
 import com.dcom.breakingbadapp.activities.detailScreen.DetailActivity
+import com.dcom.breakingbadapp.activities.login.LoginActivity
 import com.dcom.breakingbadapp.databinding.ActivityMainBinding
 import com.dcom.breakingbadapp.fragments.characters
 import com.dcom.breakingbadapp.fragments.phrases
@@ -15,7 +17,8 @@ import com.dcom.breakingbadapp.models.Character
 import com.dcom.breakingbadapp.models.Phrase
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, phrases.PhraseSelectListener{
+class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, phrases.PhraseSelectListener,
+    settings.onButtonLogoutListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,4 +61,13 @@ class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, ph
         overridePendingTransition(0, 0)
     }
 
+    override fun onClickButtonLogout() {
+        finish()
+        val intent= Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+
+        //Toast.makeText(this, "El botón ha sido pulsado", Toast.LENGTH_SHORT).show()
+    }
+        /*val intent= Intent(this, LoginActivity::class.java )
+        startActivity(intent)*/
 }
