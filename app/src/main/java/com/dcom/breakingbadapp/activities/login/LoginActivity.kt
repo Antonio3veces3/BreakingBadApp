@@ -21,19 +21,20 @@ class LoginActivity : AppCompatActivity() {
         val email = findViewById<EditText>(R.id.email)
         val password = findViewById<EditText>(R.id.password)
         val emailInt = email.text
-
+        val inputEmpty: String = getString(R.string.login_empty)
+        val inputInvalid: String = getString(R.string.login_invalid)
         buttonLogin.setOnClickListener(){
             var emailValid = isEmailValid(emailInt.toString())
             Log.i("mz","Mail: $emailValid")
             if(email.text.isEmpty() || password.text.isEmpty()){
-                Toast.makeText(this, "Please, type your email or password", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, inputEmpty , Toast.LENGTH_LONG).show()
             }else {
                 if (emailValid){
                     val intentButton = Intent(this, MainActivity::class.java)
                     startActivity(intentButton)
                     return@setOnClickListener
                 }else{
-                    Toast.makeText(this, "Please, put a valid email", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, inputInvalid, Toast.LENGTH_LONG).show()
                 }
             }
         }
