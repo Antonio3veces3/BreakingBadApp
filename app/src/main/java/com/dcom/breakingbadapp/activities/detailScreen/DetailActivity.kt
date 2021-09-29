@@ -67,9 +67,6 @@ class DetailActivity : AppCompatActivity() {
                         .into(binding.statusIconDetail)
                 }
             }
-
-
         }
-
     }
 }

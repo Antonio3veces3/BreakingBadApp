@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dcom.breakingbadapp.models.Phrase
 import com.dcom.breakingbadapp.services.quotesService
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -23,12 +24,17 @@ class PhraseViewModel: ViewModel() {
         }
     }
 
-    private suspend fun fetch(): MutableList<Phrase>{
+    fun refresh(){
+        viewModelScope.launch {
+            _phrases.value = fetch()
+        }
+    }
+
+    private suspend fun fetch() : MutableList<Phrase>{
         return withContext(Dispatchers.IO){
             val phrases: MutableList<Phrase> = quotesService.getQuotes()
 
             phrases
         }
     }
-
 }

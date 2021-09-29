@@ -19,7 +19,7 @@ import com.dcom.breakingbadapp.models.Phrase
 import com.dcom.breakingbadapp.services.QuotesService
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, phrases.PhraseSelectListener, settings.onButtonLogoutListener {
+class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, settings.onButtonLogoutListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,13 +53,6 @@ class MainActivity : AppCompatActivity(), characters.CharacterSelectListener, ph
             putExtra(DetailActivity.CHARACTER_KEY, character)
         }
         startActivity(intent)
-    }
-
-    override fun onPhraseSelected(phrase: Phrase) {
-        finish()
-        overridePendingTransition(0, 0)
-        startActivity(getIntent())
-        overridePendingTransition(0, 0)
     }
 
     override fun onClickButtonLogout() {

@@ -15,11 +15,13 @@ import com.dcom.breakingbadapp.activities.detailScreen.DetailActivity
 import com.dcom.breakingbadapp.models.Character
 
 class settings : Fragment() {
+
     private var listener: onButtonLogoutListener? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
     }
+
     interface onButtonLogoutListener {
         fun onClickButtonLogout()
     }
@@ -34,7 +36,9 @@ class settings : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btn= view.findViewById<Button>(R.id.btn_logout)
-        btn.setOnClickListener{listener?.onClickButtonLogout()}
+        btn.setOnClickListener{
+            listener?.onClickButtonLogout()
+        }
     }
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -47,5 +51,4 @@ class settings : Fragment() {
         super.onDetach()
         listener= null
     }
-
-    }
+}
