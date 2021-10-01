@@ -20,6 +20,9 @@
     <string name="login_password">Password</string>
     <string name="login_button">Login</string>
 
+    <string name="login_empty">Please, type your email and password</string>
+    <string name="login_invalid">Please, put a valid email</string>
+
     <!-- Menu -->
     <string name="menu_characters">Characters</string>
     <string name="menu_phrases">Phrases</string>

@@ -20,6 +20,8 @@
     <string name="login_email">Correo</string>
     <string name="login_password">Contraseña</string>
     <string name="login_button">Ingresar</string>
+    <string name="login_empty">Por favor, escribe tu email y contraseña</string>
+    <string name="login_invalid">Por favor, ingresa un correo válido</string>
 
     <!-- Menu -->
     <string name="menu_characters">Personajes</string>
