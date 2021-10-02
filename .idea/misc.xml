@@ -26,7 +26,7 @@
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.17028985507246377" />
-        <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/layout/character_list_item.xml" value="0.264" />
+        <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/layout/character_list_item.xml" value="0.8" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/layout/content_detail.xml" value="0.22916666666666666" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/layout/fragment_characters.xml" value="0.264" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/layout/fragment_detail.xml" value="0.22916666666666666" />
@@ -36,6 +36,8 @@
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/layout/phrases_item.xml" value="0.14909090909090908" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/menu/menu.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/menu/nav_menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21041666666666667" />
+        <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21041666666666667" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp2/app/src/main/res/drawable/ic_character.xml" value="0.240625" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp2/app/src/main/res/drawable/ic_mail.xml" value="0.23692307692307693" />
         <entry key="..\:/Users/zahor/AndroidStudioProjects/BreakingBadApp2/app/src/main/res/drawable/ic_phrase.xml" value="0.23692307692307693" />
